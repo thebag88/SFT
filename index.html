@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Slides Presentation</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply Inter font */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        /* Custom CSS for responsive iframe container */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0; /* Remove default iframe border */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 to-purple-600 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 w-full max-w-4xl transform transition-all duration-300 hover:scale-105">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 text-center">
+            My Latest Presentation
+        </h1>
+
+        <p class="text-gray-600 text-lg text-center mb-8">
+            This presentation automatically updates when changes are made in Google Slides.
+        </p>
+
+        <!-- Container for the responsive iframe -->
+        <div class="iframe-container shadow-lg ring-4 ring-purple-300 rounded-xl">
+            <!-- The src URL has been updated with your provided embed code -->
+            <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vT201BTzznH715kiRb9g6P7QGHaPEMsHyErxa1RUdeE3NrQzJk1A2OtcEqaoiA33ctfCOxJZd6VNAHI/pubembed?start=true&loop=true&delayms=15000"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+            ></iframe>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>Presentation embedded via Google Slides "Publish to web" feature.</p>
+        </div>
